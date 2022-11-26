@@ -3,6 +3,7 @@
     {
       "id": 1,
       "date": "12월 04일",
+      "time": "00:00",
       "homeTeam": "네덜란드",
       "homeTeamScore": 0,
       "awayTeam": "웨일스",
@@ -19,7 +20,8 @@
     {
       "id": 2,
       "date": "12월 04일",
-      "homeTeam": "잉글랭드",
+      "time": "04:00",
+      "homeTeam": "잉글랜드",
       "homeTeamScore": 0,
       "awayTeam": "세네갈",
       "awayTeamScore": 0,
@@ -35,6 +37,7 @@
     {
       "id": 3,
       "date": "12월 05일",
+      "time": "00:00",
       "homeTeam": "아르헨티나",
       "homeTeamScore": 0,
       "awayTeam": "덴마크",
@@ -51,6 +54,7 @@
     {
       "id": 4,
       "date": "12월 05일",
+      "time": "04:00",
       "homeTeam": "프랑스",
       "homeTeamScore": 0,
       "awayTeam": "멕시코",
@@ -67,6 +71,7 @@
     {
       "id": 5,
       "date": "12월 06일",
+      "time": "00:00",
       "homeTeam": "스페인",
       "homeTeamScore": 0,
       "awayTeam": "모로코",
@@ -83,6 +88,7 @@
     {
       "id": 6,
       "date": "12월 06일",
+      "time": "04:00",
       "homeTeam": "벨기에",
       "homeTeamScore": 0,
       "awayTeam": "독일",
@@ -99,6 +105,7 @@
     {
       "id": 7,
       "date": "12월 07일",
+      "time": "00:00",
       "homeTeam": "브라질",
       "homeTeamScore": 0,
       "awayTeam": "대한민국",
@@ -115,6 +122,7 @@
     {
       "id": 8,
       "date": "12월 07일",
+      "time": "04:00",
       "homeTeam": "포르투갈",
       "homeTeamScore": 0,
       "awayTeam": "스위스",
@@ -134,6 +142,7 @@
     {
       "id": 1,
       "date": "12월 10일",
+      "time": "00:00",
       "homeTeam": "네덜란드",
       "homeTeamScore": 0,
       "awayTeam": "아르헨티나",
@@ -150,6 +159,7 @@
     {
       "id": 2,
       "date": "12월 10일",
+      "time": "04:00",
       "homeTeam": "모로코",
       "homeTeamScore": 0,
       "awayTeam": "브라질",
@@ -166,6 +176,7 @@
     {
       "id": 3,
       "date": "12월 10일",
+      "time": "00:00",
       "homeTeam": "잉글랜드",
       "homeTeamScore": 0,
       "awayTeam": "프랑스",
@@ -182,6 +193,7 @@
     {
       "id": 4,
       "date": "12월 10일",
+      "time": "04:00",
       "homeTeam": "독일",
       "homeTeamScore": 0,
       "awayTeam": "포르투갈",
@@ -201,6 +213,7 @@
     {
       "id": 1,
       "date": "12월 15일",
+      "time": "00:00",
       "homeTeam": "아르헨티나",
       "homeTeamScore": 0,
       "awayTeam": "브라질",
@@ -217,6 +230,7 @@
     {
       "id": 2,
       "date": "12월 15일",
+      "time": "04:00",
       "homeTeam": "잉글랜드",
       "homeTeamScore": 0,
       "awayTeam": "독일",
@@ -232,10 +246,31 @@
     }
   ],
 
+  "thirdPlace": [
+    {
+      "id": 1,
+      "date": "12월 18일",
+      "time": "00:00",
+      "homeTeam": "아르헨티나",
+      "homeTeamScore": 0,
+      "awayTeam": "잉글랜드",
+      "awayTeamScore": 0,
+      "win": 0,
+      "draw": 0,
+      "lose": 0,
+      "homeTeamVote": 0,
+      "awayTeamVote": 0,
+      "drawVote": 0,
+      "homeTeamImg": "https://github.com/djshinnn/qatar-worldcup-clone/blob/main/images/countries/argentina.png?raw=true",
+      "awayTeamImg": "https://github.com/djshinnn/qatar-worldcup-clone/blob/main/images/countries/england.png?raw=true"
+    }
+  ],
+
   "final": [
     {
       "id": 1,
       "date": "12월 19일",
+      "time": "00:00",
       "homeTeam": "브라질",
       "homeTeamScore": 0,
       "awayTeam": "독일",
