@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
+import { SoonMatchContainer } from "./style";
 
 const SoonMatch = () => {
-  return <div>SoonMatch</div>
-}
+  return <SoonMatchContainer>SoonMatch</SoonMatchContainer>;
+};
 
-export default SoonMatch
+export default SoonMatch;

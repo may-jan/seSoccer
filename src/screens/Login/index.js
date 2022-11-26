@@ -1,7 +1,9 @@
-import React from 'react'
+import React from "react";
+
+import { LoginContainer } from "./style";
 
 const Login = () => {
-  return <div>Login</div>
-}
+  return <LoginContainer>Login</LoginContainer>;
+};
 
-export default Login
+export default Login;
