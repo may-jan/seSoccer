@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
+import { PreMatchContainer } from "./style";
 
 const PreMatch = () => {
-  return <div>PreMatch</div>
-}
+  return <PreMatchContainer>PreMatch</PreMatchContainer>;
+};
 
-export default PreMatch
+export default PreMatch;

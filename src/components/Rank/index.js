@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
+import { RankContainer } from "./style";
 
 const Rank = () => {
-  return <div>Rank</div>
-}
+  return <RankContainer>Rank</RankContainer>;
+};
 
-export default Rank
+export default Rank;
