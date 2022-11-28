@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+
+/* PreMatchCountry 세부 스타일 */
+img {
+  width: 100%;
+}
+
+.country {
+  margin-top: -15px;
+  font-family: "Hahmlet", serif !important;
+}
+
+/* PreMatchInfo 세부 스타일 */
+.match-info {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.score {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  text-align: center;
+}
+
+.date-current {
+  background-color: #eeeeee;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.date-time {
+  margin-top: 20px;
+}
