@@ -1,9 +1,9 @@
 import React from "react";
 
-import { LoginContainer } from "./style";
+import Auth from "../Auth";
 
 const Login = () => {
-  return <LoginContainer>Login</LoginContainer>;
+  return <Auth state="LogIn" />;
 };
 
 export default Login;

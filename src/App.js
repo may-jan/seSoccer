@@ -3,13 +3,15 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import PreMatch from "./components/PreMatch";
-import Login from "./screens/Login";
 import Vote from "./screens/Vote";
 import Section from "./screens/Section";
 import MyPage from "./screens/MyPage";
 
 import "./App.css";
 import { AppContainer, MainContainer } from "./common/style";
+import SignUp from "./screens/Signup";
+import Login from "./screens/Login";
+import { LoginContainer } from "./screens/Auth/style";
 
 function App() {
   return (
@@ -17,7 +19,11 @@ function App() {
       <AppContainer>
         <Navbar />
         <MainContainer>
-          <Login />
+          <LoginContainer>
+            <Login />
+            <SignUp />
+          </LoginContainer>
+
           <PreMatch />
 
           <Switch>
