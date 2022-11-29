@@ -11,9 +11,9 @@
       "win": 0,
       "draw": 0,
       "lose": 0,
-      "homeTeamVote": 0,
-      "awayTeamVote": 0,
-      "drawVote": 0,
+      "homeTeamVote": 100,
+      "awayTeamVote": 200,
+      "drawVote": 250,
       "homeTeamImg": "https://github.com/djshinnn/qatar-worldcup-clone/blob/main/images/countries/netherlands.png?raw=true",
       "awayTeamImg": "https://github.com/djshinnn/qatar-worldcup-clone/blob/main/images/countries/wales.png?raw=true"
     },
@@ -137,7 +137,6 @@
       "awayTeamImg": "https://github.com/djshinnn/qatar-worldcup-clone/blob/main/images/countries/switzerland.png?raw=true"
     }
   ],
-
   "QuaterFinals": [
     {
       "id": 1,
@@ -208,7 +207,6 @@
       "awayTeamImg": "https://github.com/djshinnn/qatar-worldcup-clone/blob/main/images/countries/portugal.png?raw=true"
     }
   ],
-
   "semiFinal": [
     {
       "id": 1,
@@ -245,7 +243,6 @@
       "awayTeamImg": "https://github.com/djshinnn/qatar-worldcup-clone/blob/main/images/countries/germany.png?raw=true"
     }
   ],
-
   "thirdPlace": [
     {
       "id": 1,
@@ -265,7 +262,6 @@
       "awayTeamImg": "https://github.com/djshinnn/qatar-worldcup-clone/blob/main/images/countries/england.png?raw=true"
     }
   ],
-
   "final": [
     {
       "id": 1,
