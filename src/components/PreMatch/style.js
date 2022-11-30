@@ -8,7 +8,6 @@ import { COLORS, FontSize } from "../../constants/index";
 export const PreMatchContainer = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: ${COLORS.lightWhite};
   height: 25vh;
   box-sizing: border-box;
   padding: 20px;
