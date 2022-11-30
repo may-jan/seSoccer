@@ -2,17 +2,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
 
 /* PreMatchCountry 세부 스타일 */
-img {
+.prematchitem__img {
   width: 100%;
 }
 
-.country {
+.prematchitem__country {
   margin-top: -15px;
   font-family: "Hahmlet", serif !important;
 }
 
 /* PreMatchInfo 세부 스타일 */
-.match-info {
+.prematchitem__match_info {
   width: 40%;
   height: 100%;
   display: flex;
@@ -21,12 +21,12 @@ img {
   font-family: "Nanum Gothic", sans-serif;
 }
 
-.score {
+.prematchitem__score {
   font-size: 3rem;
   font-weight: 900;
 }
 
-.date {
+.prematchitem__date {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,13 +36,13 @@ img {
   text-align: center;
 }
 
-.date-current {
+.prematchitem__date_current {
   background-color: #eeeeee;
   padding: 5px 10px;
   border-radius: 10px;
 }
 
-.date-time {
+.prematchitem__date_time {
   margin-top: 20px;
 }
 
