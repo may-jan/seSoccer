@@ -15,6 +15,8 @@ import {
 import { COLORS } from "../../constants";
 import { LoginModeText } from "../../common/style";
 
+import logo from "../../asset/images/sesoccer.png";
+
 const Auth = ({ state }) => {
   const { login } = useAuth();
   const [isLoginMode, setIsLoginMode] = useState(true);
@@ -71,7 +73,8 @@ const Auth = ({ state }) => {
   return (
     <Modal state={state} setIsLoginMode={setIsLoginMode}>
       <Box textAlign="center">
-        <Box>
+        <img src={logo} alt="" />
+        <Box marginTop="10px">
           <Typography variant="h5" component="h2">
             <LoginModeText>{!isLoginMode ? "SignUp" : "LogIn"}</LoginModeText>
             Your Account

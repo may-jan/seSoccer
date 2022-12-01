@@ -23,7 +23,7 @@ export const AppContainer = styled.div`
 
 export const MainContainer = styled.div`
   flex-direction: column;
-  width: calc(100vw - 200px);
+  width: calc(100vw);
 `;
 
 export const ModalButton = styled(Button)(() => ({
