@@ -60,7 +60,13 @@ const PreMatch = () => {
   return (
     <PreMatchContainer>
       {matchData.map((match) => (
-        <PreMatchItem key={match.id} matchData={match} />
+        <PreMatchItem
+          key={match.id}
+          matchData={match}
+          className={
+            match.isMatched ? "prematchitem__white" : "prematchitem__gray"
+          }
+        />
       ))}
     </PreMatchContainer>
   );

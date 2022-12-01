@@ -9,6 +9,7 @@
 .prematchitem__country {
   margin-top: -15px;
   font-family: "Hahmlet", serif !important;
+  font-size: 1.5rem;
 }
 
 /* PreMatchInfo 세부 스타일 */
@@ -22,7 +23,7 @@
 }
 
 .prematchitem__score {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
 }
 
@@ -40,10 +41,12 @@
   background-color: #eeeeee;
   padding: 5px 10px;
   border-radius: 10px;
+  font-size: 1.5rem;
 }
 
 .prematchitem__date_time {
   margin-top: 20px;
+  font-size: 1.4rem;
 }
 
 /* .true {
@@ -53,6 +56,7 @@
 /* 스크롤바 스타일 */
 ::-webkit-scrollbar {
   height: 5px; /* 스크롤바의 너비 */
+  width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
