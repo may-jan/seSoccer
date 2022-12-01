@@ -8,6 +8,7 @@ import { COLORS, FontSize } from "../../constants/index";
 export const PreMatchContainer = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
   height: 25vh;
   box-sizing: border-box;
   padding: 20px;
@@ -20,8 +21,8 @@ export const PreMatchItems = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 400px;
-  height: 100%;
+  min-width: 300px;
+  height: 80%;
   background-color: ${COLORS.white};
   border-radius: 20px;
   margin-right: 20px;
