@@ -33,10 +33,10 @@ function App() {
   ]
 
   return (
-    <>
+    <div>
      <SoonMatch1/>
      <SoonMatch2 idList={idList}/>
-    </>
+    </div>
   );
 }
 
