@@ -4,7 +4,11 @@ import "./style.css";
 
 const PreMatchItem = ({ matchData }) => {
   return (
-    <PreMatchItems>
+    <PreMatchItems
+      className={
+        matchData.isMatched ? "prematchitem__grey" : "prematchitem__white"
+      }
+    >
       <PreMatchCountry>
         <img
           className="prematchitem__img"
