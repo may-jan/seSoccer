@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const RankContainer = styled.div`
   height: 65vh;
+  margin-top: 5vh;
 
   @media (max-width: 1200px) {
     height: 32vh;
