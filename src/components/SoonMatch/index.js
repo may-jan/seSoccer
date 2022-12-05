@@ -1,8 +1,43 @@
-import React from "react";
-import { SoonMatchContainer } from "./style";
+import SoonMatch1 from './SoonMatch1';
+import SoonMatch2 from './SoonMatch2';
 
-const SoonMatch = () => {
-  return <SoonMatchContainer>SoonMatch</SoonMatchContainer>;
-};
+function App() {
+  const idList = [
+    {
+      id : 'aaa'
+    },
+    {
+      id : 'bbb'
+    },
+    {
+      id : 'ccc'
+    },
+    {
+      id : 'ddd'
+    },
+    {
+      id : 'eee'
+    },
+    {
+      id : 'fff'
+    },
+    {
+      id : 'ggg'
+    },
+    {
+      id : 'hhh'
+    },
+    {
+      id : 'iii'
+    }
+  ]
 
-export default SoonMatch;
+  return (
+    <>
+     <SoonMatch1/>
+     <SoonMatch2 idList={idList}/>
+    </>
+  );
+}
+
+export default App;
