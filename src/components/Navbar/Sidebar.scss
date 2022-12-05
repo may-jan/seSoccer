@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.navbar {
+  background: black;
+  height: 10vh;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .seSoccerLogo {
+    height: 10vh;
+  }
+
+  .loginButton {
+    height: 40px;
+    width: 100px;
+    background-color: white;
+    border-radius: 4px;
+    border-style: none;
+    margin-left: auto;
+    margin-right: 20px;
+
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+
+    cursor: pointer;
+  }
+}
+
+.sidebar {
+  background: black;
+  // display: flex;
+  // position: fixed;
+  width: 200px;
+  height: 90vh;
+  font-size: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+  .loginButton {
+    display: none;
+  }
+}
