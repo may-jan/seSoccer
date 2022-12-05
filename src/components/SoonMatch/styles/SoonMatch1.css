@@ -1,6 +1,14 @@
 .SoonMatch1{
     display: flex;
-    width:600px;
-    height:350px;
+    width:100%;
+    height:50%;
     border:1px solid black;
 }
+
+@media (max-width: 1200px) {
+   .SoonMatch1{
+    width:50%;
+    height:100%;
+    float:left;
+   }
+  }
