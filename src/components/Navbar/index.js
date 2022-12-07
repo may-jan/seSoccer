@@ -7,8 +7,13 @@ const Navbar = () => {
   return (
     <NavContainer>
       <div className="navbar">
-        <img className="seSoccerLogo" src={Logo} alt="Logo" />
-        <button className="loginButton">Login</button>
+        <img
+          className="seSoccerLogo"
+          src={Logo}
+          alt="Logo"
+          style={{ width: "170px", height: "65px" }}
+        />
+        {/* <button className="loginButton">Login</button> */}
       </div>
 
       <div className="sidebar">

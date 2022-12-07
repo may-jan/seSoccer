@@ -1,42 +1,43 @@
-import SoonMatch1 from './SoonMatch1';
-import SoonMatch2 from './SoonMatch2';
+import SoonMatch1 from "./SoonMatch1";
+import SoonMatch2 from "./SoonMatch2";
+import { SoonMatchContainer } from "./style";
 
 function App() {
   const idList = [
     {
-      id : 'aaa'
+      id: "aaa",
     },
     {
-      id : 'bbb'
+      id: "bbb",
     },
     {
-      id : 'ccc'
+      id: "ccc",
     },
     {
-      id : 'ddd'
+      id: "ddd",
     },
     {
-      id : 'eee'
+      id: "eee",
     },
     {
-      id : 'fff'
+      id: "fff",
     },
     {
-      id : 'ggg'
+      id: "ggg",
     },
     {
-      id : 'hhh'
+      id: "hhh",
     },
     {
-      id : 'iii'
-    }
-  ]
+      id: "iii",
+    },
+  ];
 
   return (
-    <div>
-     <SoonMatch1/>
-     <SoonMatch2 idList={idList}/>
-    </div>
+    <SoonMatchContainer>
+      <SoonMatch1 />
+      <SoonMatch2 idList={idList} />
+    </SoonMatchContainer>
   );
 }
 

@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 
 export const NavContainer = styled.div`
   flex-direction: column;
-  background-color: #81c147;
-  width: 200px;
+  /* background-color: #81c147; */
+  width: 150px;
+  padding: 20px;
 
   @media (max-width: 800px) {
     display: none;
@@ -12,7 +13,7 @@ export const NavContainer = styled.div`
 `;
 
 export const SidebarList = styled(Link)`
-  color: white;
+  /* color: white; */
   list-style: none;
   text-decoration: none;
   text-align: center;

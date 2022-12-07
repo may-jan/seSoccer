@@ -48,6 +48,7 @@ export default function TransitionsModal({ children, state, setIsLoginMode }) {
       </ModalButton>
 
       <Modal
+        sx={{ zIndex: 1 }}
         open={open}
         onClose={handleClose}
         closeAfterTransition
