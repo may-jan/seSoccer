@@ -16,14 +16,24 @@ export const GradientColor = `linear-gradient(
 
 export const AppContainer = styled.div`
   display: flex;
-  /* height: 100vh;
-  width: 100vw; */
-  /* background-color: #a4e468; */
+  height: 100vh;
+  width: 100vw;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(113, 155, 124, 1) 100%
+  );
 `;
 
 export const MainContainer = styled.div`
   flex-direction: column;
-  /* width: calc(100vw); */
+  width: calc(100vw - 200px);
+  margin-left: 20px;
+
+  @media (max-width: 1024px) {
+    width: 100vw;
+  }
 `;
 
 export const ModalButton = styled(Button)(() => ({

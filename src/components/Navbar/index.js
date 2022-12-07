@@ -11,9 +11,8 @@ const Navbar = () => {
           className="seSoccerLogo"
           src={Logo}
           alt="Logo"
-          style={{ width: "170px", height: "65px" }}
+          style={{ width: "240px", height: "80px" }}
         />
-        {/* <button className="loginButton">Login</button> */}
       </div>
 
       <div className="sidebar">

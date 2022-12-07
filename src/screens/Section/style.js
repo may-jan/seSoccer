@@ -3,10 +3,11 @@ import { Grid } from "@mui/material";
 
 export const SectionContainer = styled.div`
   /* height: 65vh; */
-  width: calc(100vw - 150px);
+  width: calc(100vw - 200px);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 30px;
 
   @media (max-width: 1024px) {
     width: calc(100vw);

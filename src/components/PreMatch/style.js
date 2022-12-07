@@ -15,6 +15,10 @@ export const PreMatchContainer = styled.div`
   width: inherit;
   font-size: ${FontSize.regular};
   overflow: auto;
+
+  @media (max-width: 1024px) {
+    width: 100vw;
+  }
 `;
 
 export const PreMatchItems = styled.div`
