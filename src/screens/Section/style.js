@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import { Grid } from "@mui/material";
+import styled from 'styled-components'
+import { Grid } from '@mui/material'
 
 export const SectionContainer = styled.div`
   /* height: 65vh; */
-  width: calc(100vw - 200px);
+  width: calc(100vw - 220px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,6 +12,6 @@ export const SectionContainer = styled.div`
   @media (max-width: 1024px) {
     width: calc(100vw);
   }
-`;
+`
 
-export const SectionGrid = styled(Grid)((props) => ({}));
+export const SectionGrid = styled(Grid)(props => ({}))

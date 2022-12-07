@@ -1,15 +1,15 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const NavContainer = styled.div`
   flex-direction: column;
   width: 200px;
   padding: 20px;
-
+  margin-right: 20px;
   @media (max-width: 800px) {
     display: none;
   }
-`;
+`
 
 export const SidebarList = styled(Link)`
   list-style: none;
@@ -32,4 +32,4 @@ export const SidebarList = styled(Link)`
   margin-bottom: 20px;
 
   cursor: pointer;
-`;
+`

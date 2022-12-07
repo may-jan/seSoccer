@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-import { COLORS } from "../constants";
-import { Button } from "@mui/material";
+import { COLORS } from '../constants'
+import { Button } from '@mui/material'
 
 export const GradientColor = `linear-gradient(
   90deg,
@@ -12,7 +12,7 @@ export const GradientColor = `linear-gradient(
   rgba(96, 169, 254, 1) 100%,
   rgba(61, 82, 119, 1) 100%,
   rgba(0, 241, 232, 0.9542410714285714) 100%
-)`;
+)`
 
 export const AppContainer = styled.div`
   display: flex;
@@ -24,17 +24,16 @@ export const AppContainer = styled.div`
     rgba(255, 255, 255, 1) 0%,
     rgba(113, 155, 124, 1) 100%
   );
-`;
+`
 
 export const MainContainer = styled.div`
   flex-direction: column;
-  width: calc(100vw - 200px);
-  margin-left: 20px;
+  width: calc(100vw - 220px);
 
   @media (max-width: 1024px) {
     width: 100vw;
   }
-`;
+`
 
 export const ModalButton = styled(Button)(() => ({
   background: GradientColor,
@@ -43,15 +42,15 @@ export const ModalButton = styled(Button)(() => ({
   // fontSize: "12px",
   // textTransform: "none",
   // borderRadius: "8px",
-}));
+}))
 
 export const LoginModeText = styled.span`
   color: ${COLORS.purple};
   margin-right: 5px;
-`;
+`
 
 export const ErrorText = styled.p`
   margin-top: 5px;
   color: ${COLORS.red};
   font-size: 12px;
-`;
+`
