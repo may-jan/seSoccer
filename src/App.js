@@ -24,7 +24,7 @@ function App() {
             <SignUp />
           </LoginContainer>
 
-          <PreMatch />
+          {/* <PreMatch /> */}
 
           <Switch>
             <Route path="/" exact component={Section} />

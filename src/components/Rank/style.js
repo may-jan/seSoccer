@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const RankContainer = styled.div`
   height: 65vh;
-  margin-top: 5vh;
+  padding-right: 40px;
 
-  @media (max-width: 1200px) {
-    height: 32vh;
+  @media (max-width: 1024px) {
+    padding: 0 20px;
   }
 `;
 

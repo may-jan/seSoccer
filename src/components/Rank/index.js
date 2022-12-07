@@ -47,11 +47,19 @@ function Rank() {
 
   return (
     <RankContainer>
-      <table style={{ width: "100%", height: "90%" }}>
+      <table
+        style={{
+          width: "100%",
+          height: "100%",
+          textAlign: "center",
+        }}
+      >
         <thead
           style={{
             backgroundColor: "#891638",
             color: "#fff",
+            height: "30px",
+            fontSize: "1.5rem",
           }}
         >
           {table.getHeaderGroups().map((headerGroup) => (
@@ -87,11 +95,11 @@ function Rank() {
             </tr>
           ))}
         </thead>
-        <tbody style={{ textAlign: "center", fontSize: "0.8em" }}>
+        <tbody style={{ textAlign: "center", fontSize: "1.3rem" }}>
           {table.getRowModel().rows.map((row) => (
             <tr key={row.id}>
               {row.getVisibleCells().map((cell) => (
-                <td key={cell.id}>
+                <td key={cell.id} style={{ paddingTop: "20px" }}>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
               ))}

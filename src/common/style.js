@@ -16,14 +16,14 @@ export const GradientColor = `linear-gradient(
 
 export const AppContainer = styled.div`
   display: flex;
-  height: 100vh;
-  width: 100vw;
-  background-color: #a4e468;
+  /* height: 100vh;
+  width: 100vw; */
+  /* background-color: #a4e468; */
 `;
 
 export const MainContainer = styled.div`
   flex-direction: column;
-  width: calc(100vw);
+  /* width: calc(100vw); */
 `;
 
 export const ModalButton = styled(Button)(() => ({
