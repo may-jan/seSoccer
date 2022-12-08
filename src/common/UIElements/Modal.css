@@ -1,9 +1,10 @@
 .modal {
   z-index: 100;
-  position: fixed;
-  top: 30vh;
-  left: 10%;
-  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 300px;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   border-radius: 8px;
@@ -16,6 +17,7 @@
   padding: 1rem 0.5rem;
   background: #2a006e;
   color: white;
+  border-radius: 8px 8px 0 0;
 }
 
 .modal__header h2 {
@@ -28,13 +30,6 @@
 
 .modal__footer {
   padding: 2rem 0.5rem;
-}
-
-@media (min-width: 768px) {
-  .modal {
-    left: calc(50% - 12.5rem);
-    width: 25rem;
-  }
 }
 
 .modal-enter {

@@ -17,7 +17,7 @@ export const AuthContextProvider = ({ children }) => {
     setIsLoggedIn(false);
   }, []);
 
-  console.log(isLoggedIn);
+  console.log({ isLoggedIn });
 
   const values = useMemo(
     () => ({ isLoggedIn, login, logout }),

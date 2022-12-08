@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Modal from "../../common/UIElements/Modal";
+import Modal from "../../common/UIElements/LogInModal";
 import { Box, Button, Typography } from "@mui/material";
 
 import { LoginBox, SubmitButton, SubmitButtonBox } from "./style";
@@ -65,13 +65,39 @@ const Auth = ({ state }) => {
     }
 
     setIsLoginMode((prevMode) => !prevMode);
-    console.log(isLoginMode);
   };
 
   const authSubmitHandler = async (event) => {
     event.preventDefault();
 
+    setIsLoading(true);
+
     if (isLoginMode) {
+      try {
+        const response = await fetch("http://localhost:5050/api/users/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: formState.inputs.email.value,
+            password: formState.inputs.password.value,
+          }),
+        });
+
+        const responseData = await response.json();
+
+        if (!response.ok) {
+          console.log("login", responseData.message);
+          throw new Error(responseData.message);
+        }
+        console.log("login", responseData);
+        setIsLoading(false);
+        login();
+      } catch (err) {
+        setIsLoading(false);
+        setError(err.message || "알 수 없는 오류입니다. 다시 시도해주세요.");
+      }
     } else {
       try {
         setIsLoading(true);
@@ -91,10 +117,10 @@ const Auth = ({ state }) => {
         const responseData = await response.json();
 
         if (!response.ok) {
-          console.log(responseData.message);
+          console.log("signup", responseData.message);
           throw new Error(responseData.message);
         }
-        console.log(responseData);
+        console.log("signup", responseData);
         setIsLoading(false);
         login();
       } catch (err) {

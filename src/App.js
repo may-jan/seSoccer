@@ -9,19 +9,29 @@ import MyPage from "./screens/MyPage";
 
 import "./App.css";
 import { AppContainer, MainContainer } from "./common/style";
-import SignUp from "./screens/Signup";
-import Login from "./screens/Login";
+import { Login } from "./screens/Login";
+import { SignUp } from "./screens/Login";
+import { MyProfile } from "./screens/Login";
 import { LoginContainer } from "./screens/Auth/style";
+import useAuth from "./context/auth-context";
 
 function App() {
+  const { isLoggedIn } = useAuth();
+
   return (
     <Router>
       <AppContainer>
         <Navbar />
         <MainContainer>
           <LoginContainer>
-            <Login />
-            <SignUp />
+            {isLoggedIn ? (
+              <MyProfile />
+            ) : (
+              <React.Fragment>
+                <Login />
+                <SignUp />
+              </React.Fragment>
+            )}
           </LoginContainer>
 
           <PreMatch />
