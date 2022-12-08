@@ -1,103 +1,107 @@
-import React, { useState, useEffect } from "react";
-import { COLORS } from "../../constants";
-import MatchBox from "./MatchBox";
-import { VoteContainer, RoundButtonContainer, RoundButton } from "./style";
+import React, { useState, useEffect } from 'react'
+import { COLORS } from '../../constants'
+import MatchBox from './MatchBox'
+import { VoteContainer, RoundButtonContainer, RoundButton } from './style'
 
-import "./style.css";
+import './style.scss'
 
 const Vote = () => {
-  const [matches, setMatches] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
-  const [isFilteredData, setIsFilteredData] = useState(false);
-  const [isSelcetedRounds, setIsSelectedRounds] = useState();
+  const [matches, setMatches] = useState([])
+  const [filteredData, setFilteredData] = useState([])
+  const [isFilteredData, setIsFilteredData] = useState(false)
+  const [isSelcetedRounds, setIsSelectedRounds] = useState()
   const [rounds, setRounds] = useState([
-    { title: "16강" },
-    { title: "8강" },
-    { title: "4강" },
-    { title: "3-4위전" },
-    { title: "결승" },
-  ]);
+    { title: '16강' },
+    { title: '8강' },
+    { title: '4강' },
+    { title: '3-4위전' },
+    { title: '결승' },
+  ])
 
-  const [checkRound, setCheckRound] = useState("16강");
+  const [checkRound, setCheckRound] = useState('16강')
 
-  const changeRoundsHandler = (e) => {
-    setIsSelectedRounds(e.target.value);
-  };
+  const changeRoundsHandler = e => {
+    setIsSelectedRounds(e.target.value)
+  }
 
   const selectedStyle = {
     backgroundColor: COLORS.darkRed,
-  };
+  }
 
-  console.log(isSelcetedRounds);
+  console.log(isSelcetedRounds)
 
   // Read (조회)
   const getData = () => {
     let response = fetch(`http://localhost:5050/api/rounds`)
-      .then((res) => res.json())
-      .then((data) => setMatches(data.rounds));
-  };
+      .then(res => res.json())
+      .then(data => setMatches(data.rounds))
+  }
 
   // Update (수정)
   const updateData = (roundId, item) => {
     let response = fetch(`http://localhost:5050/api/rounds/${roundId}`, {
-      method: "PATCH", // HTTP 통신방식 : GET, POST, PUT, DELETE
+      method: 'PATCH', // HTTP 통신방식 : GET, POST, PUT, DELETE
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         ...item,
       }),
-    });
-  };
+    })
+  }
 
   function filterMatches(round) {
-    let filtered = matches.filter((match) => match.round === round);
-    setFilteredData(filtered);
-    setIsFilteredData(true);
+    let filtered = matches.filter(match => match.round === round)
+    setFilteredData(filtered)
+    setIsFilteredData(true)
   }
 
   useEffect(() => {
-    getData();
-  }, []);
+    getData()
+  }, [])
 
-  const changeRound = (e) => {
-    setCheckRound(e.target.value);
-    filterMatches(e.target.value);
-  };
+  const changeRound = e => {
+    setCheckRound(e.target.value)
+    filterMatches(e.target.value)
+  }
 
   return (
     <VoteContainer>
       <RoundButtonContainer direction="row" spacing={2}>
         {rounds.map((round, idx) => (
-          <RoundButton
+          <button
             key={idx}
             variant="outlined"
             value={round.title}
-            onClick={(e) => {
-              changeRound(e);
-              changeRoundsHandler(e);
+            onClick={e => {
+              changeRound(e)
+              changeRoundsHandler(e)
             }}
-            className={isSelcetedRounds === round.title && "active"}
+            className={
+              isSelcetedRounds === round.title
+                ? 'roundButton active'
+                : 'roundButton'
+            }
           >
             {round.title}
-          </RoundButton>
+          </button>
         ))}
       </RoundButtonContainer>
       {isFilteredData ? (
         <React.Fragment>
-          {filteredData.map((match) => (
+          {filteredData.map(match => (
             <MatchBox key={match.id} data={match} />
           ))}
         </React.Fragment>
       ) : (
         <React.Fragment>
-          {matches.map((match) => (
+          {matches.map(match => (
             <MatchBox key={match.id} data={match} />
           ))}
         </React.Fragment>
       )}
     </VoteContainer>
-  );
-};
+  )
+}
 
-export default Vote;
+export default Vote
