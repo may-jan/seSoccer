@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { MatchContainer, HeaderBox, ButtonBox, MatchButton } from "./style";
+import {
+  MatchContainer,
+  HeaderBox,
+  ButtonBox,
+  MatchButton,
+  MatchButtonBox,
+  MatchImageBox,
+} from "./style";
+import { COLORS } from "../../constants";
 
 const MatchBox = ({ data }) => {
   const [matchStatus, setMatchStatus] = useState("경기예정");
@@ -11,18 +19,32 @@ const MatchBox = ({ data }) => {
     draw: false,
   });
 
-  console.log(isSelcetedData);
-
   const homeActiveStyle = {
-    color: isSelcetedData.home ? "red" : "white",
+    backgroundColor: isSelcetedData.home ? COLORS.darkRed : "#e2e2e2",
+    color: isSelcetedData.home ? COLORS.white : COLORS.selectedBlack,
+    opacity: !isSelcetedData.home && 0.65,
+    display: "flex",
+    justifyContent: "flex-end",
+    border: "none",
+    borderRadius: "8px 0 0 8px",
   };
 
   const drawActiveStyle = {
-    color: isSelcetedData.draw ? "red" : "white",
+    backgroundColor: isSelcetedData.draw ? COLORS.darkRed : "#e2e2e2",
+    color: isSelcetedData.draw ? COLORS.white : COLORS.selectedBlack,
+    opacity: !isSelcetedData.draw && 0.65,
+    border: "none",
+    borderRadius: 0,
   };
 
   const awayActiveStyle = {
-    color: isSelcetedData.away ? "red" : "white",
+    backgroundColor: isSelcetedData.away ? COLORS.darkRed : "#e2e2e2",
+    color: isSelcetedData.away ? COLORS.white : COLORS.selectedBlack,
+    opacity: !isSelcetedData.away && 0.65,
+    display: "flex",
+    justifyContent: "flex-start",
+    border: "none",
+    borderRadius: "0 8px 8px 0",
   };
 
   const homeUpdateData = () => {
@@ -42,13 +64,10 @@ const MatchBox = ({ data }) => {
     });
   };
 
-  console.log(copiedData);
-
   const awayUpdateData = () => {
     setCopiedData({ ...data });
     setIsSelectedData({ home: false, away: true, draw: false });
 
-    console.log("update");
     let response = fetch(`http://localhost:5050/api/rounds/${data.id}`, {
       method: "PATCH", // HTTP 통신방식 : GET, POST, PUT, DELETE
       headers: {
@@ -66,7 +85,6 @@ const MatchBox = ({ data }) => {
     setCopiedData({ ...data });
     setIsSelectedData({ home: false, away: false, draw: true });
 
-    console.log("update");
     let response = fetch(`http://localhost:5050/api/rounds/${data.id}`, {
       method: "PATCH", // HTTP 통신방식 : GET, POST, PUT, DELETE
       headers: {
@@ -81,7 +99,7 @@ const MatchBox = ({ data }) => {
   };
 
   return (
-    <MatchContainer>
+    <MatchContainer maxWidth="md">
       <ul>
         <li>
           <HeaderBox>
@@ -98,18 +116,24 @@ const MatchBox = ({ data }) => {
               style={homeActiveStyle}
               variant="outlined"
               onClick={homeUpdateData}
+              sx={{ fontSize: "1.4rem" }}
             >
-              <span>
-                <span>
-                  <img src={data.homeTeamImg} width="35" height="35" alt="" />
-                </span>
+              <MatchButtonBox>
                 <span>{data.homeTeam}</span>
-              </span>
+                <MatchImageBox
+                  style={{
+                    marginLeft: "5px",
+                  }}
+                >
+                  <img src={data.homeTeamImg} width="35" height="35" alt="" />
+                </MatchImageBox>
+              </MatchButtonBox>
             </MatchButton>
             <MatchButton
               style={drawActiveStyle}
               variant="outlined"
               onClick={drawUpdateData}
+              sx={{ fontSize: "1.4rem" }}
             >
               무승부
             </MatchButton>
@@ -117,18 +141,16 @@ const MatchBox = ({ data }) => {
               style={awayActiveStyle}
               variant="outlined"
               onClick={awayUpdateData}
+              sx={{ fontSize: "1.4rem" }}
             >
-              <span>
-                <span>
-                  <img
-                    src={data.awayTeamImg}
-                    alt="Img"
-                    width="35"
-                    height="35"
-                  />
-                </span>
-                <span>{data.awayTeam}</span>
-              </span>
+              <MatchImageBox
+                style={{
+                  marginRight: "5px",
+                }}
+              >
+                <img src={data.awayTeamImg} alt="Img" width="35" height="35" />
+              </MatchImageBox>
+              <span>{data.awayTeam}</span>
             </MatchButton>
           </ButtonBox>
           <div></div>

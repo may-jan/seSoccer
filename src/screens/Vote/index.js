@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { COLORS } from "../../constants";
 import MatchBox from "./MatchBox";
 import { VoteContainer, RoundButtonContainer, RoundButton } from "./style";
+
+import "./style.css";
 
 const Vote = () => {
   const [matches, setMatches] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [isFilteredData, setIsFilteredData] = useState(false);
+  const [isSelcetedRounds, setIsSelectedRounds] = useState();
   const [rounds, setRounds] = useState([
     { title: "16강" },
     { title: "8강" },
@@ -15,6 +19,16 @@ const Vote = () => {
   ]);
 
   const [checkRound, setCheckRound] = useState("16강");
+
+  const changeRoundsHandler = (e) => {
+    setIsSelectedRounds(e.target.value);
+  };
+
+  const selectedStyle = {
+    backgroundColor: COLORS.darkRed,
+  };
+
+  console.log(isSelcetedRounds);
 
   // Read (조회)
   const getData = () => {
@@ -46,13 +60,10 @@ const Vote = () => {
     getData();
   }, []);
 
-  // console.log(matches)
-
   const changeRound = (e) => {
     setCheckRound(e.target.value);
     filterMatches(e.target.value);
   };
-  console.log(filteredData);
 
   return (
     <VoteContainer>
@@ -62,7 +73,11 @@ const Vote = () => {
             key={idx}
             variant="outlined"
             value={round.title}
-            onClick={(e) => changeRound(e)}
+            onClick={(e) => {
+              changeRound(e);
+              changeRoundsHandler(e);
+            }}
+            className={isSelcetedRounds === round.title && "active"}
           >
             {round.title}
           </RoundButton>
