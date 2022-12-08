@@ -5,6 +5,7 @@ import { VoteContainer, RoundButtonContainer, RoundButton } from "./style";
 const Vote = () => {
   const [matches, setMatches] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
+  const [isFilteredData, setIsFilteredData] = useState(false);
   const [rounds, setRounds] = useState([
     { title: "16강" },
     { title: "8강" },
@@ -38,6 +39,7 @@ const Vote = () => {
   function filterMatches(round) {
     let filtered = matches.filter((match) => match.round === round);
     setFilteredData(filtered);
+    setIsFilteredData(true);
   }
 
   useEffect(() => {
@@ -66,9 +68,19 @@ const Vote = () => {
           </RoundButton>
         ))}
       </RoundButtonContainer>
-      {filteredData.map((match) => (
-        <MatchBox key={match.id} data={match} />
-      ))}
+      {isFilteredData ? (
+        <React.Fragment>
+          {filteredData.map((match) => (
+            <MatchBox key={match.id} data={match} />
+          ))}
+        </React.Fragment>
+      ) : (
+        <React.Fragment>
+          {matches.map((match) => (
+            <MatchBox key={match.id} data={match} />
+          ))}
+        </React.Fragment>
+      )}
     </VoteContainer>
   );
 };
