@@ -59,7 +59,7 @@ function Rank() {
             backgroundColor: "#891638",
             color: "#fff",
             height: "30px",
-            fontSize: "1.5rem",
+            fontSize: "1.6rem",
           }}
         >
           {table.getHeaderGroups().map((headerGroup) => (
@@ -68,7 +68,6 @@ function Rank() {
                 <th
                   key={header.id}
                   style={{
-                    // width: header.getSize(),
                     cursor: header.column.getCanSort() ? "pointer" : "default",
                     padding: "5px 0 5px 0",
                   }}
@@ -95,7 +94,7 @@ function Rank() {
             </tr>
           ))}
         </thead>
-        <tbody style={{ textAlign: "center", fontSize: "1.3rem" }}>
+        <tbody style={{ textAlign: "center", fontSize: "1.4rem" }}>
           {table.getRowModel().rows.map((row) => (
             <tr key={row.id}>
               {row.getVisibleCells().map((cell) => (
