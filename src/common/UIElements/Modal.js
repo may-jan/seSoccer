@@ -1,66 +1,50 @@
 import React from "react";
+import ReactDOM from "react-dom";
+import { CSSTransition } from "react-transition-group";
 
-import Backdrop from "@mui/material/Backdrop";
-import Box from "@mui/material/Box";
-import Modal from "@mui/material/Modal";
-import Fade from "@mui/material/Fade";
-import { ModalButton } from "../style";
+import Backdrop from "./Backdrop";
+import "./Modal.css";
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 300,
-  bgcolor: "background.paper",
-  borderRadius: "10px",
-  boxShadow: 24,
-  padding: "40px 30px 30px 30px",
-};
+const ModalOverlay = (props) => {
+  const content = (
+    <div className={`modal ${props.className}`} style={props.style}>
+      <header className={`modal__header ${props.headerClass}`}>
+        <h2>{props.header}</h2>
+      </header>
 
-export default function TransitionsModal({ children, state, setIsLoginMode }) {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
-  const isLoginModeHandler = () => {
-    if (state === "LogIn") setIsLoginMode(true);
-    if (state === "SignUp") setIsLoginMode(false);
-  };
-
-  return (
-    <div>
-      <ModalButton
-        onClick={() => {
-          handleOpen();
-          isLoginModeHandler();
-        }}
-        sx={{
-          color: "white",
-          marginRight: "15px",
-          fontWeight: "bold",
-          fontSize: "12px",
-          textTransform: "none",
-          borderRadius: "8px",
-        }}
+      <form
+        onSubmit={
+          props.onSubmit ? props.onSubmit : (event) => event.preventDefault()
+        }
       >
-        {state}
-      </ModalButton>
-
-      <Modal
-        sx={{ zIndex: 1 }}
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={open}>
-          <Box sx={style}>{children}</Box>
-        </Fade>
-      </Modal>
+        <div className={`modal__content ${props.contentClass}`}>
+          {props.children}
+        </div>
+        <footer className={`modal__footer ${props.footerClass}`}>
+          {props.footer}
+        </footer>
+      </form>
     </div>
   );
-}
+
+  return ReactDOM.createPortal(content, document.getElementById("modal-hook"));
+};
+
+const Modal = (props) => {
+  return (
+    <React.Fragment>
+      {props.show && <Backdrop onClick={props.onCancel} />}
+      <CSSTransition
+        in={props.show}
+        mountOnEnter
+        unmountOnExit
+        timeout={200}
+        classNames="modal"
+      >
+        <ModalOverlay {...props} />
+      </CSSTransition>
+    </React.Fragment>
+  );
+};
+
+export default Modal;

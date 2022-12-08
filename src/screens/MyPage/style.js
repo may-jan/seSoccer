@@ -15,7 +15,7 @@ export const MyPageProfile = styled.div`
   align-items: center;
   padding: 20px;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 100px;
 `;
 export const MyPageWrapper = styled.div`
   padding: 20px;

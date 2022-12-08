@@ -68,7 +68,7 @@ function Rank() {
                 <th
                   key={header.id}
                   style={{
-                    width: header.getSize(),
+                    // width: header.getSize(),
                     cursor: header.column.getCanSort() ? "pointer" : "default",
                     padding: "5px 0 5px 0",
                   }}
