@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const RankContainer = styled.div`
   height: 65vh;
   padding-right: 40px;
+  font-family: "Nanum Gothic", sans-serif;
 
   @media (max-width: 1024px) {
     padding: 0 20px;
