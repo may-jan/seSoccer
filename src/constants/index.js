@@ -7,9 +7,10 @@ export const COLORS = {
   lightWhite: "#eeeeee",
   darkWhite: "#bdbdbd",
   grey: "#616161",
-  lightGrey: "#7c7979",
+  lightGrey: "#ccc",
   black: "#000000",
   purple: "#9248d5",
+  selectedBlack: "#1E1E24",
 };
 
 // Font Size
