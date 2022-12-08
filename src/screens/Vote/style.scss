@@ -26,3 +26,21 @@
   color: #888888;
   padding-left: 1rem;
 }
+
+.percent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.percent-left {
+  margin-left: 2rem;
+  font-size: 2.5rem;
+}
+
+.percent-right {
+  margin-right: 2rem;
+  font-size: 2.5rem;
+}
