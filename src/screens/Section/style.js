@@ -10,7 +10,7 @@ export const SectionContainer = styled.div`
   margin-top: 30px;
 
   @media (max-width: 1024px) {
-    width: calc(100vw);
+    width: 100vw;
   }
 `
 

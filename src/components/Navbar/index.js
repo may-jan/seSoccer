@@ -1,12 +1,12 @@
-import React from "react";
-import { NavContainer, SidebarList } from "./style";
-import "./Sidebar.scss";
-import Logo from "../../asset/images/sesoccer.png";
-import useAuth from "../../context/auth-context";
-import { alertHandler } from "../../utils/alert";
+import React from 'react'
+import { NavContainer, SidebarList } from './style'
+import './Sidebar.scss'
+import Logo from '../../asset/images/sesoccer.png'
+import useAuth from '../../context/auth-context'
+import { alertHandler } from '../../utils/alert'
 
 const Navbar = () => {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn } = useAuth()
 
   return (
     <NavContainer>
@@ -15,7 +15,7 @@ const Navbar = () => {
           className="seSoccerLogo"
           src={Logo}
           alt="Logo"
-          style={{ width: "240px", height: "80px" }}
+          style={{ width: '240px', height: '80px' }}
         />
       </div>
 
@@ -31,7 +31,7 @@ const Navbar = () => {
             <SidebarList
               to="/"
               onClick={() => {
-                alertHandler();
+                alertHandler()
               }}
             >
               Vote
@@ -39,7 +39,7 @@ const Navbar = () => {
             <SidebarList
               to="/"
               onClick={() => {
-                alertHandler();
+                alertHandler()
               }}
             >
               MyPage
@@ -48,7 +48,7 @@ const Navbar = () => {
         )}
       </div>
     </NavContainer>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
