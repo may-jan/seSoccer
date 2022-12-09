@@ -1,60 +1,61 @@
 .grid {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 5px;
-	grid-gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  grid-gap: 20px;
 }
+
 .grid-item {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: white;
-	height: 9em;
-	padding: 10px;
-	border-radius: 10px;
-	border: 1px solid rgb(165, 164, 164);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  height: 9em;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(165, 164, 164);
 }
 
 .info {
-	margin-left: 20px;
+  margin-left: 20px;
 }
 
 /* proflie */
 .pic {
-	margin-top: -90px;
-	margin-bottom: 20px;
-	width: 130px;
-	height: 130px;
-	border-radius: 50%;
+  margin-top: -90px;
+  margin-bottom: 20px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
 }
 .name {
-	font-size: 30px;
-	font-weight: bold;
-	margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .profile span {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 /* chart */
 .chart {
-	width: 50px;
-	height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 /* Box info */
 .info h2 {
-	font-size: 20px;
-	font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1200px) {
-	.grid {
-		grid-gap: 5px;
-	}
-	.grid-item {
-		height: 8em;
-	}
+  .grid {
+    grid-gap: 5px;
+  }
+  .grid-item {
+    height: 8em;
+  }
 } ;
