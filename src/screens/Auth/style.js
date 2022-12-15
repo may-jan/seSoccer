@@ -8,9 +8,7 @@ export const LoginContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: #86a269;
-  height: 10vh;
-  padding: 0 20px;
+  padding: 35px 20px 0 20px;
 `;
 
 export const LoginBox = styled(Box)`

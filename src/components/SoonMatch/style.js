@@ -1,10 +1,19 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const SoonMatchContainer = styled.div`
-  background-color: #d7ebc2;
+  padding: 0 100px 0 20px;
   height: 65vh;
 
   @media (max-width: 1200px) {
-    height: 33vh;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: flex-start;
+    margin-left: 10rem;
   }
-`;
+
+  @media (max-width: 1024px) {
+    padding: 0 20px;
+    flex-direction: column;
+    margin-left: 15rem;
+  }
+`
