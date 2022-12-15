@@ -11,7 +11,7 @@
     justify-content:center;
     align-items:center;
     height:25%;
-    color:rgb(149, 6, 87);
+    color:#8d1b3d;
     font-weight:bold;
 }
 
@@ -22,9 +22,9 @@
 
 .SoonMatch2_result{
     box-sizing:border-box;
+    background:#fff;
     width:85%;
     height:75%;
-    border:1px solid #ddd;
     border-radius:10px;
     margin:10px auto;
     padding:0 70px;
@@ -33,7 +33,7 @@
 .ID_list{
     box-sizing:border-box;
     height:55%;
-    border-bottom:1px solid #ddd;
+    border-bottom:1px solid #8d1b3d;
     padding:20px;
 }
 
@@ -49,10 +49,12 @@
 .id{
     width:33.33%;
     height:33.33%;
-    font-size:1.2rem;
+    font-size:1.4rem;
     display:flex;
     justify-content:center;
     align-items:center;
+    color:#8d1b3d;
+    font-weight:bold;
 }
 
 
@@ -60,8 +62,8 @@
     box-sizing:border-box;
     height:45%;
     padding:20px;
-    color:#999;
-    font-size:15px;
+    color:#8d1b3d;
+    font-size:1.4rem;
     text-align:center;
     display:flex;
     justify-content:center;
